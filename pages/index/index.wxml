@@ -1,0 +1,16 @@
+<view class="container">
+  <swiper class="splash" indicator-dots>
+    <swiper-item 
+	    wx:for="{{ movies }}" 
+	    wx:for-index="index" 
+	    wx:key="index">
+      <image 
+	      src="{{ item.images.large }}" 
+	      class="slide-image" 
+	      mode="aspectFill"/>
+      <button 
+      	class="start" 
+      	bindtap="handleStart">立即体验</button>
+    </swiper-item>
+  </swiper>
+</view>

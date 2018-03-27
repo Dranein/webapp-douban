@@ -7,9 +7,23 @@
   height: 100%;
 }
 
+.slide swiper .item-title {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  font-size: 30rpx;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 3px;
+  padding: 10rpx;
+  color: #fff;
+}
+
 .board {
   box-sizing: border-box;
-  background-color: #f8f9fb;
+  background-color: #ddd;
+  outline: none;
+  width: 100%;
+  overflow: hidden;
 }
 
 .board-item {
@@ -17,15 +31,29 @@
   flex-direction: column;
   cursor: pointer;
   font-size: 20rpx;
-  margin: 40rpx 0;
   padding: 20rpx;
+  padding-bottom: 0;
   background-color: #fff;
+  margin-bottom: 10rpx;
+}
+.board-item:last-child{
+  margin-bottom: 4rpx;
 }
 
 .board-item .title {
   display: flex;
   margin-bottom: 10rpx;
+  font-size: 30rpx;
   width: 100%;
+  padding-left: 40rpx;
+}
+.board-item .title::after {
+  content: '';
+  width: 20rpx;
+  height: 40rpx;
+  background-color: green;
+  position: absolute;
+  left: 20rpx;
 }
 
 .board-item .title text {
@@ -65,4 +93,5 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  margin-top: 10rpx;
 }

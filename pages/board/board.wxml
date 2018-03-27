@@ -10,29 +10,30 @@
         bindtap="handleClick"
         data-item="{{item}}">
         <image src="{{ item.images.large }}" mode="aspectFill"/>
+        <text class="item-title">{{item.title}}</text>
       </swiper-item>
     </swiper>
   </view>
   <view class="board" scroll-y="true">
-    <!-- <block wx:for="{{ boards }}" wx:key="key">
+     <block wx:for="{{ boards }}" wx:key="key">
       <view class="board-item">
-        <navigator url="../list/list?type={{ item.key }}&title={{ item.title }}" hover-class="none">
-          <view class="title">
-            <text>{{ item.title }}</text>
-            <image src="../../images/arrowright.png" mode="aspectFill"/>
-          </view>
-        </navigator>
-        <scroll-view class="content" scroll-x="true">
+        <!-- <navigator url="../list/list?type={{ item.key }}&title={{ item.title }}" hover-class="none"> -->
+        <view class="title">
+          <text>{{ item.title }}</text>
+          <!-- <image src="../../images/arrowright.png" mode="aspectFill"/> -->
+        </view>
+        <!-- </navigator>  -->
+         <scroll-view class="content" scroll-x="true">
           <view class="inner">
-            <navigator wx:for="{{ item.movies }}" wx:key="id" url="../item/item?id={{ item.id }}">
+            <navigator wx:for="{{ item.subjects }}" wx:key="id" url="../edit/edit?id={{ item.id }}">
               <view class="movie-item">
                 <image src="{{ item.images.large }}" mode="aspectFill"/>
                 <text>{{ item.title }}</text>
               </view>
             </navigator>
           </view>
-        </scroll-view>
+        </scroll-view> 
       </view>
-    </block> -->
+    </block> 
   </view>
 </view>
